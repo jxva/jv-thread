@@ -9,8 +9,6 @@
 
 jv_thread_main
 
-.vscode/
-
 bin/
 obj/
 
