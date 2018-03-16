@@ -204,7 +204,7 @@ static void *jv_job_thread_cleanup(jv_thread_t *thread) {
 #ifdef PTHREAD_T_IS_STRUCT
     if (activep->tid.p == my_tid.p) {
 #else
-   if (activep->tid == my_tid) {
+    if (activep->tid == my_tid) {
 #endif
       *activepp = activep->next;
       break;
@@ -307,7 +307,7 @@ static void jv_clone_attributes(pthread_attr_t *new_attr, pthread_attr_t *old_at
     (void) pthread_attr_getstack(old_attr, &addr, &size);
 
 #if defined(__APPLE__)
-    (void) pthread_attr_setstack(new_attr, &addr,  size);
+    (void) pthread_attr_setstack(new_attr, &addr, size);
 #else
     /* don't allow a non-NULL thread stack address */
     (void) pthread_attr_setstack(new_attr, (void *) 0, size);

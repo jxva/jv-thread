@@ -5,10 +5,10 @@ static volatile jv_uint_t count;
 
 static void *test(void *arg) {
   pthread_t tid = pthread_self();
-  jv_uint_t i = *(jv_uint_t *)arg;
+  jv_uint_t i = *(jv_uint_t *) arg;
   count++;
 #ifdef PTHREAD_T_IS_STRUCT
-  printf("%lu, %lu, %lu \n",(unsigned long)tid.p, i, count);
+  printf("%lu, %lu, %lu \n", (unsigned long) tid.p, i, count);
 #else
   printf("%lu, %lu, %lu \n", (unsigned long) tid, i, count);
 #endif
@@ -57,4 +57,3 @@ int main(int argc, char *argv[]) {
   test2();
   return 0;
 }
-
