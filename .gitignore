@@ -1,0 +1,16 @@
+.DS_Store
+
+*.o
+*.log
+*.layout
+*.depend
+*.stackdump
+*.exe
+
+jv_thread_main
+
+.vscode/
+
+bin/
+obj/
+
